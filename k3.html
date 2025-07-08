@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.txt {
+  text-align: center;
+}
+
+fieldset {
+  margin: auto;
+  width: 400px;
+  padding: 1em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('723bf831b674ed3fefdcd0e9c0030644.jpg'); /* Replace this URL with the URL of your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background image fixed while scrolling */
+}
+
+.success-message {
+  text-align: center;
+  margin-top: 20px;
+  color: black;
+}
+</style>
+</head>
+<body bgcolor="cyan">
+<h1 class="txt">Consultation</h1>
+<form id="consultationForm">
+<fieldset>
+<label for="name">Name:</label>
+<input type="text" id="name" placeholder="Name"><br><br>
+<label for="fileno">Hospital File No:</label>
+<input type="text" id="fileno" placeholder="Hospital File No"><br><br>
+<label for="speciality">Consulting speciality:</label>
+<select id="speciality">
+<option value="orthopedic">Orthopedic</option>
+<option value="cardiology">Cardiology</option>
+<option value="gynecology">Gynecology</option>
+<option value="general physician">General Physician</option>
+<option value="dermatology">Dermatology</option>
+<option value="neuro surgeon">Neuro Surgeon</option>
+</select><br><br>
+<label for="Timing">Appointment Slot Selection:</label>
+<select id="Timing" required>
+<option value="9:00AM-10:00AM">9:00AM-10:00AM</option>
+<option value="10:00AM-11:00AM">10:00AM-11:00AM</option>
+<option value="11:00AM-12:00PM">11:00AM-12:00PM</option>
+</select><br><br>
+<input type="submit" value="Submit">
+</fieldset>
+</form>
+<div id="successMessage" class="success-message" style="display: none;">Successfully submitted!</div>
+
+<script>
+document.getElementById("consultationForm").addEventListener("submit", function(event){
+  event.preventDefault(); // Prevent the form from submitting normally
+
+  // Show the success message
+  document.getElementById("successMessage").style.display = "block";
+
+  // Optional: You can also reset the form fields after submission
+  document.getElementById("consultationForm").reset();
+});
+</script>
+</body>
+</html>

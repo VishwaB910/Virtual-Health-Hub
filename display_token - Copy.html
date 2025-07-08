@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.txt {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('723bf831b674ed3fefdcd0e9c0030644.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.token-info {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 24px;
+}
+</style>
+</head>
+<body>
+<h1 class="txt">Token Information</h1>
+
+<div class="token-info" id="tokenInfo">
+  <p>Your file/token number is: <strong id="token"></strong></p>
+</div>
+
+<script>
+// Function to generate a random token number
+function generateToken() {
+  return Math.floor(Math.random() * 1000000) + 1; // Generates a random number between 1 and 1000000
+}
+
+// Get the token number
+var token = generateToken();
+
+// Display the token number on the page
+document.getElementById('token').innerText = token;
+</script>
+
+</body>
+</html>

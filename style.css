@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('723bf831b674ed3fefdcd0e9c0030644.jpg'); /* Add your background image URL here */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.doctor {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.doctor img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
